@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <script>
+        
+        let opcion;
+        let temperatura, resultado;
+        let esOpcionValida = false;
+
+        alert("Conversor de Temperatura");
+        while (!esOpcionValida) {
+            opcion = parseInt(prompt("1. Celsius a Fahrenheit\n2. Fahrenheit a Celsius\nSeleccione una opción (1 o 2):"));
+
+            switch (opcion) {
+                case 1:
+                    temperatura = parseFloat(prompt("Ingrese la temperatura en grados Celsius:"));
+                    resultado = (temperatura * 9/5) + 32;
+                    alert("La temperatura equivalente en grados Fahrenheit es:"+resultado);
+                    esOpcionValida = true;
+                    break;
+                case 2:
+                    temperatura = parseFloat(prompt("Ingrese la temperatura en grados Fahrenheit:"));
+                    resultado = (temperatura - 32) * 5/9;
+                    alert("La temperatura equivalente en grados Celsius es:"+resultado);
+                    esOpcionValida = true;
+                    break;
+                default:
+                    alert("Opción no válida. Intente nuevamente.");
+            }
+        }
+    </script>
+</body>
+</html>
